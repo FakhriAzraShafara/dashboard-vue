@@ -37,7 +37,7 @@
           <li class="nav-item d-flex align-items-center">
             <router-link
               :to="{ name: 'Signin' }"
-              class="px-0 nav-link font-weight-bold text-white"
+              class="px-0 nav-link font-weight-bold text-dark"
               target="_blank"
             >
               <i
@@ -54,7 +54,7 @@
             <a
               href="#"
               @click="toggleSidebar"
-              class="p-0 nav-link text-white"
+              class="p-0 nav-link text-dark"
               id="iconNavbarSidenav"
             >
               <div class="sidenav-toggler-inner">
@@ -65,7 +65,7 @@
             </a>
           </li>
           <li class="px-3 nav-item d-flex align-items-center">
-            <a class="p-0 nav-link text-white" @click="toggleConfigurator">
+            <a class="p-0 nav-link text-dark" @click="toggleConfigurator">
               <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
             </a>
           </li>
@@ -75,7 +75,7 @@
           >
             <a
               href="#"
-              class="p-0 nav-link text-white"
+              class="p-0 nav-link text-dark"
               :class="[showMenu ? 'show' : '']"
               id="dropdownMenuButton"
               data-bs-toggle="dropdown"
@@ -205,7 +205,7 @@ export default {
   name: "navbar",
   data() {
     return {
-      showMenu: false
+      showMenu: false,
     };
   },
   props: ["minNav", "textWhite"],
@@ -219,15 +219,15 @@ export default {
     toggleSidebar() {
       this.toggleSidebarColor("bg-white");
       this.navbarMinimize();
-    }
+    },
   },
   components: {
-    Breadcrumbs
+    Breadcrumbs,
   },
   computed: {
     currentRouteName() {
       return this.$route.name;
-    }
-  }
+    },
+  },
 };
 </script>
